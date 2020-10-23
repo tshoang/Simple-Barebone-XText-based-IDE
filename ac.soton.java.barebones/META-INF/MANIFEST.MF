@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: ac.soton.java.barebones
+Bundle-ManifestVersion: 2
+Bundle-Name: ac.soton.java.barebones
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: ac.soton.java.barebones; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.eclipse.xtext.util,
+ org.eclipse.emf.common,
+ org.eclipse.xtend.lib;bundle-version="2.14.0",
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: ac.soton.java.barebones.serializer,
+ ac.soton.java.barebones.bareBones,
+ ac.soton.java.barebones.scoping,
+ ac.soton.java.barebones,
+ ac.soton.java.barebones.parser.antlr.internal,
+ ac.soton.java.barebones.bareBones.impl,
+ ac.soton.java.barebones.parser.antlr,
+ ac.soton.java.barebones.services,
+ ac.soton.java.barebones.generator,
+ ac.soton.java.barebones.validation,
+ ac.soton.java.barebones.bareBones.util
+Import-Package: org.apache.log4j

@@ -1,0 +1,32 @@
+grammar ac.soton.java.barebones.BareBones with org.eclipse.xtext.common.Terminals
+
+generate bareBones "http://www.soton.ac/java/barebones/BareBones"
+
+Program:
+	statements += Statement+;
+	
+Statement:
+	Clear | Increment | Decrement | While
+;
+
+Clear:
+	{Clear}
+	'clear' name=ID ';'
+;
+
+Increment:
+	{Increment}
+	'incr' name=ID ';'
+;
+
+Decrement:
+	{Decrement}
+	'decr' name=ID ';'
+;
+
+While:
+	{While}
+	'while' name=ID 'not' '0' 'do' ';'
+		statements += Statement+
+	'end' ';' 
+;
